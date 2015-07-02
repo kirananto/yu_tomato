@@ -1,0 +1,7 @@
+[
+  {
+    "repository": "proprietary_vendor_yu",
+    "target_path": "vendor/yu"
+    "revision":    "cm-12.1"
+  }
+]
