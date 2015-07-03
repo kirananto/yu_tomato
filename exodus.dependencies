@@ -2,6 +2,5 @@
   {
     "repository": "kernel_yu_msm8916",
     "target_path": "kernel/yu/msm8916"
-    "revision":    "cm-12.1"
   }
 ]
