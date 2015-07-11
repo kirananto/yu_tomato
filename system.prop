@@ -13,11 +13,6 @@ audio.offload.pcm.24bit.enable=true
 use.voice.path.for.pcm.voip=true
 vidc.enc.narrow.searchrange=1
 
-# Audio voice concurrency related flags
-voice.playback.conc.disabled=true
-voice.record.conc.disabled=true
-voice.voip.conc.disabled=true
-
 # Media
 mm.enable.qcom_parser=3179041
 mm.enable.smoothstreaming=true
@@ -45,9 +40,6 @@ ro.qualcomm.cabl=0
 ro.sf.lcd_density=320
 debug.enable.sglscale=1
 
-# HACK! Remove when fixed by QC
-debug.hwui.render_dirty_regions=false
-
 # GPS
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
@@ -72,11 +64,12 @@ persist.sys.isUsbOtgEnabled=1
 persist.radio.multisim.config=dsds
 persist.radio.apm_sim_not_pwdn=1
 rild.libargs=-d /dev/smd0
+rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 ril.ecclist=000,08,100,101,102,110,112,118,119,120,122,911,999
 persist.data.target=dpm1
 
 ro.com.android.mobiledata=false
-ro.telephony.default_network=10,1
+ro.telephony.default_network=9,1
 ro.use_data_netmgrd=true
 
 # Time

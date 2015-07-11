@@ -76,6 +76,7 @@ endif
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
+AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 BOARD_USES_ALSA_AUDIO := true
 
@@ -152,7 +153,7 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
+TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_yu
 TARGET_USERIMAGES_USE_EXT4 := true
 
@@ -160,6 +161,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 
 # RIL
+PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
 
 # SELinux
@@ -170,6 +172,7 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
     bluetooth_loader.te \
+    bootanim.te \
     file.te \
     file_contexts \
     healthd.te \
@@ -179,6 +182,9 @@ BOARD_SEPOLICY_UNION += \
     system_app.te \
     system.te \
     wcnss_service.te
+
+# Video
+TARGET_HAVE_SIGNED_VENUS_FW := true
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
