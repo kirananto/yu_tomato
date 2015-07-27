@@ -14,10 +14,10 @@
 
 $(call inherit-product, device/yu/tomato/full_tomato.mk)
 
-# Inherit some common exodus stuff.
-$(call inherit-product, vendor/exodus/config/common_full_phone.mk)
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := exodus_tomato
+PRODUCT_NAME := cm_tomato
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := tomato
 
