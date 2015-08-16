@@ -89,6 +89,17 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-filter=interpret-only \
+    dalvik.vm.image-dex2oat-filter=speed
+
+PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := \
+    --compiler-filter=interpret-only
+
+$(call add-product-dex-preopt-module-config,services,--compiler-filter=speed)
+
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     yl_btmac
